@@ -1,0 +1,20 @@
+{% extends 'app/bootstrap.html' %}
+
+{% load bootstrap4 %}
+
+{% block bootstrap4_content %}
+    <div>
+        <h1>{% block title %}(no title){% endblock %}</h1>
+
+        <p>
+            <a href="">Home </a>
+            <a href="{% url 'Feedback' %}">Feedback</a>
+            
+        </p>
+
+        {% autoescape off %}{% bootstrap_messages %}{% endautoescape %}
+
+        {% block content %}(no content){% endblock %}
+    </div>
+
+{% endblock %}

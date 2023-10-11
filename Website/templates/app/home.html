@@ -1,0 +1,72 @@
+<!--HOME PAGE-->
+
+{% extends 'app/base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}PastLook 📍{% endblock %}
+
+{% block content %}
+{% load static %} <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="{% static 'style.css' %}">
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+{% load static %} <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'><link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+<h2>🗺️Welcome to PastLook!🗺️ </h2>
+{% load crispy_forms_tags %}  
+<div class="container" id="container">
+	<div class="form-container sign-up-container">
+		
+		<form action="#" onsubmit="if(document.getElementById('agree').checked) { } else { alert('Please indicate that you have read and agreed to the GDPR Policy');  }" method="POST">
+			{% csrf_token %}
+			<h1>Create Account</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your email for registration</span>
+			{{ register_form|crispy }}
+			<input type="checkbox" name="checkbox" value="check" id="agree" /> I have read and agreed to the <a href="{% url 'GDPR' %}">GDPR Policy</a>
+			<button method="submit" name="submit" value="signup">Sign Up</button>
+		</form>
+	</div>
+	<div class="form-container sign-in-container">
+			<h1>Sign in</h1>
+			<div class="social-container">
+				<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+				<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+				<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+			</div>
+			<span>or use your account</span>
+			<form method="POST">
+				{% csrf_token %}
+				{{ login_form|crispy }}
+				<button method="submit" name="submit" value="signin">Sign in</button>
+				<a href="#">Forgot your password?</a>
+			</form>
+	</div>
+	<div class="overlay-container">
+		<div class="overlay">
+			<div class="overlay-panel overlay-left">
+				<h1>Welcome Back, Explorer!</h1>
+				<p>To continue your journey with us,  please login with your credentials</p>
+				<button class="ghost" id="signIn">Sign In</button>
+			</div>
+			<div class="overlay-panel overlay-right">
+				<h1>Hello, Explorer!</h1>
+				<p>Register your credentials and start your journey with us</p>
+				<button class="ghost" id="signUp">Sign Up</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+    {% load static %}<script src="{% static 'script.js' %}"></script>
+
+</body>
+</html>
+{% endblock %}
+

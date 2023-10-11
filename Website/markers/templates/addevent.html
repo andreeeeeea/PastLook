@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Add your own marker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'addevent.css' %}" />
+	<script src ="{% static 'addevent.js' %}" ></script>
+  </head>
+  <body>
+    <div class="form-container sign-in-container">
+		<form method="post" action="https://pastlook.site/api/v1/event/" enctype="multipart/form-data" onsubmit = "postInfo()">
+			<h1>Add your own marker</h1>
+			<input type="text" placeholder="Country Name" id = "countryName"/>
+			<input type="text" placeholder="Event Name" id = "eventName"/>
+			<input type="text" placeholder="Event Description" id = "eventDescription"/>
+			<input type="date" placeholder="date" id = "year"/>
+			<button>Add</button>
+		</form>
+	</div>
+  </body>
+
+</html>

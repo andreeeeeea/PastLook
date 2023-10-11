@@ -1,0 +1,22 @@
+<!--HOME PAGE-->
+
+{% extends 'app/base.html' %}
+{% load bootstrap4 %}
+
+{% block title %}PastLook 📍{% endblock %}
+
+
+
+{% block content %}
+{% load static %} <link rel="stylesheet" href="{% static 'form.css' %}">
+<body>
+    <div class = "container">
+    {% load static %}<embed src = "{% static 'GDPR Document.pdf' %}" type = "application/pdf" width = "100%" height = "600px"/>
+
+
+    </div>
+</body>
+
+
+
+{% endblock %}
