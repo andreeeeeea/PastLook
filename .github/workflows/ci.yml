@@ -1,6 +1,7 @@
 name: CI
 
-on: [ push ]
+# on: [ push ]  # Disabled to prevent CI from running
+on: workflow_dispatch  # Manual trigger only
 
 jobs:
 
