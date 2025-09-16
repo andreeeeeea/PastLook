@@ -10,3 +10,10 @@ I served as the team lead, coordinating development through Agile sprints, while
 
 ## Features
 - Interactive map interface for exploring historical events by location.
+- Event data displayed with details and context
+- Built collaboratively using Agile methodologies and team sprints
+
+## Tech Stack
+- Frontend: HTML, CSS, JavaScript, Bootstrap
+- Backend: Python, Django
+- Database: PostgreSQL
