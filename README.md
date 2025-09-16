@@ -1,6 +1,7 @@
 # PastLook.com 📍🗺️
 
-Website for those interested in historical events - Team Project 2022 
+### A website for those interested in historical events - Team Project 2022 
+
 ![alt text](https://github.com/andreeeeeea/PastLook/blob/main/Screenshot3.jpg?raw=true)
 
 ## Introduction
